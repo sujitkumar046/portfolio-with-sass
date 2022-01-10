@@ -52,6 +52,8 @@ img {
                 line-height: 1.2;
             }
         }
+
+       
     }
 
     &-home::after {
@@ -69,6 +71,8 @@ img {
     
 }
 
+
+
 #nav {
     display: flex;
     justify-content: space-between;
@@ -85,6 +89,7 @@ img {
         padding: 1rem 1.5rem;
         font-family: 'Lobster Two', cursive;
         font-weight: 700;
+        color: #fff;
     
     
     }
@@ -116,10 +121,208 @@ img {
 
 
 
+// Home section
+
+#home {
+    &-a {
+        .specials {
+            display: grid;
+            margin-top: 3rem;
+            grid-gap: 1rem;
+            grid-template-columns: repeat(4,1fr);
+
+            .fas {
+                color:$primary-color;
+                padding-bottom: 0.4rem;
+            }
+        }
+    }
+
+    &-b {
+        .stats {
+            display: grid;
+            margin-top: 3rem;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 1.6rem;
+
+
+            img {
+                width:75px;
+                height: 75px;
+                border-radius: 50%;
+            }
+        }
+
+    
+    }
+
+    &-c {
+        .process {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 1.5rem;
+            text-align: center;
+
+            &-step {
+                position: absolute;
+                top:0;
+                right: 0;
+                font-size: 1.6rem;
+                background: $primary-color;
+                border-radius: 50%;
+                height: 15px;
+                width: 15px;
+                line-height: 15px;
+                padding: 1rem;
+                transition: all 1s;
+
+
+                &-step:hover {
+
+                    background: $dark-color;
+                
+                }
+            }
+
+            .fas {
+                border-radius: 50%;
+                background: $dark-color;
+                color: #fff;
+                padding: 2rem;
+                width: 70px;
+                height: 70px;
+                line-height: 70px;
+                text-align: center;
+                position: relative;
+                transition: all 1s;
+
+
+                &:hover {
+                    background: $primary-color;
+                    transform: scale(1.1);
+
+                }
+            }
+
+
+        }
+    }
+}
+
+
+// About page styling
+
+.header-inner {
+    background: $bg-image no-repeat 20% 30% /cover;
+    height: 5.5rem;
+    border-bottom: 3px solid $primary-color;
+    position: relative;
+    z-index: 2;
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: rgba($color: #000000, $alpha: 0.5);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+    }
+}
+
+
+#about {
+    &-a {
+        .about-info {
+            display: grid;
+           grid-template-areas: 'bioimage bio bio';
+           grid-gap: 1.2rem;
+           margin-top: 2rem;
+        
+           .bio-image {
+               grid-area: bioimage;
+               justify-self: center;
+               margin: auto;
+              
+           }
+        
+           .bio {
+               grid-area: bio;
+               border-left: 3px solid $primary-color;
+               padding: 0.8rem;
+               background-color: $light-color;
+        
+               h3, h4, p, i{
+                   margin-bottom: 1rem;
+        
+               }
+        
+               .fas {
+                   color: $primary-color;
+               }
+           }
+        
+          
+        }
+        
+
+    }
+
+    &-b {
+        .progress {
+            overflow: hidden;
+            height: 20px;
+            background: $medim-color;
+            border-radius: 5px;
+            margin-bottom: 0.3rem;
+
+            div {
+                height: 100%;
+                color: #fff;
+                text-align: center;
+                background: $primary-color;
+            }
+        }
+    }
+}
 
 
 
-// Utilities
+
+// Footer
+
+
+#main-footer {
+    background: $dark-color;
+    color: #fff;
+    height: 5rem;
+
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        height: 5rem;
+        align-items: center;
+
+        .social .fab {
+            margin-right: 1rem  ;
+            border: 2px #fff solid;
+            border-radius: 50%;
+            height: 1.6rem;
+            width: 1.6rem;
+            line-height: 1.6rem;
+            padding: 0.5rem;
+            text-align: center;
+
+            &:hover {
+                background: $primary-color;
+            }
+
+        }
+    }
+}
+// Utilities 
 
 
 .container {
@@ -130,6 +333,7 @@ img {
 
 
 }
+
 
 %btn-shared {
     display: inline-block;
@@ -158,10 +362,66 @@ img {
     }
 }
 
- button[class^='btn-']:hover, 
+button[class^='btn-']:hover, 
 a [class^='btn-']:hover,
 input[class^='btn-']:hover {
 
 background-color: $primary-color;
  color: #fff;
+}
+
+.text-center {
+    text-align: center;
+}
+
+//---------- Padding-------------
+
+.py {
+    &-1 {
+        padding: 1rem 0;
+    }
+    &-2 {
+        padding: 2rem 0;
+    }
+    &-3 {
+        padding: 3rem 0;
+    }
+    &-4 {
+        padding: 4rem 0;
+    }
+   
+}
+//------------------ Margin
+.my {
+    &-1 {
+        margin: 1rem 0;
+    }
+    &-2 {
+        margin: 2rem 0;
+    }
+    &-3 {
+        margin: 3rem 0;
+    }
+    &-4 {
+        margin: 4rem 0;
+    }
+   
+}
+
+
+
+.bottom-line {
+    height: 2px;
+    width: 4rem;
+    background-color: $primary-color;
+    display: block;
+    margin:0 auto 1rem auto;
+}
+
+
+.section-title {
+    font-size: 2rem;
+    display: block;
+    padding-bottom: 0.5rem;
+    font-weight: 100;
 }

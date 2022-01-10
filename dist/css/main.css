@@ -52,7 +52,8 @@ img {
   #nav h3 {
     padding: 1rem 1.5rem;
     font-family: 'Lobster Two', cursive;
-    font-weight: 700; }
+    font-weight: 700;
+    color: #fff; }
   #nav li {
     padding: 1rem 1.5rem; }
   #nav a {
@@ -66,6 +67,127 @@ img {
       border-color: #ccc; }
     #nav a.current {
       border-color: #ffbc00; }
+
+#home-a .specials {
+  display: grid;
+  margin-top: 3rem;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(4, 1fr); }
+  #home-a .specials .fas {
+    color: #ffbc00;
+    padding-bottom: 0.4rem; }
+
+#home-b .stats {
+  display: grid;
+  margin-top: 3rem;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.6rem; }
+  #home-b .stats img {
+    width: 75px;
+    height: 75px;
+    border-radius: 50%; }
+
+#home-c .process {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+  text-align: center; }
+  #home-c .process-step {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1.6rem;
+    background: #ffbc00;
+    border-radius: 50%;
+    height: 15px;
+    width: 15px;
+    line-height: 15px;
+    padding: 1rem;
+    transition: all 1s; }
+    #home-c .process-step-step:hover {
+      background: #333; }
+  #home-c .process .fas {
+    border-radius: 50%;
+    background: #333;
+    color: #fff;
+    padding: 2rem;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    position: relative;
+    transition: all 1s; }
+    #home-c .process .fas:hover {
+      background: #ffbc00;
+      transform: scale(1.1); }
+
+.header-inner {
+  background: url("../img/banner.jpg") no-repeat 20% 30%/cover;
+  height: 5.5rem;
+  border-bottom: 3px solid #ffbc00;
+  position: relative;
+  z-index: 2; }
+  .header-inner::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1; }
+
+#about-a .about-info {
+  display: grid;
+  grid-template-areas: 'bioimage bio bio';
+  grid-gap: 1.2rem;
+  margin-top: 2rem; }
+  #about-a .about-info .bio-image {
+    grid-area: bioimage;
+    justify-self: center;
+    margin: auto; }
+  #about-a .about-info .bio {
+    grid-area: bio;
+    border-left: 3px solid #ffbc00;
+    padding: 0.8rem;
+    background-color: #f4f4f4; }
+    #about-a .about-info .bio h3, #about-a .about-info .bio h4, #about-a .about-info .bio p, #about-a .about-info .bio i {
+      margin-bottom: 1rem; }
+    #about-a .about-info .bio .fas {
+      color: #ffbc00; }
+
+#about-b .progress {
+  overflow: hidden;
+  height: 20px;
+  background: #ccc;
+  border-radius: 5px;
+  margin-bottom: 0.3rem; }
+  #about-b .progress div {
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    background: #ffbc00; }
+
+#main-footer {
+  background: #333;
+  color: #fff;
+  height: 5rem; }
+  #main-footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    align-items: center; }
+    #main-footer .footer-content .social .fab {
+      margin-right: 1rem;
+      border: 2px #fff solid;
+      border-radius: 50%;
+      height: 1.6rem;
+      width: 1.6rem;
+      line-height: 1.6rem;
+      padding: 0.5rem;
+      text-align: center; }
+      #main-footer .footer-content .social .fab:hover {
+        background: #ffbc00; }
 
 .container {
   max-width: 1280px;
@@ -97,3 +219,43 @@ a [class^='btn-']:hover,
 input[class^='btn-']:hover {
   background-color: #ffbc00;
   color: #fff; }
+
+.text-center {
+  text-align: center; }
+
+.py-1 {
+  padding: 1rem 0; }
+
+.py-2 {
+  padding: 2rem 0; }
+
+.py-3 {
+  padding: 3rem 0; }
+
+.py-4 {
+  padding: 4rem 0; }
+
+.my-1 {
+  margin: 1rem 0; }
+
+.my-2 {
+  margin: 2rem 0; }
+
+.my-3 {
+  margin: 3rem 0; }
+
+.my-4 {
+  margin: 4rem 0; }
+
+.bottom-line {
+  height: 2px;
+  width: 4rem;
+  background-color: #ffbc00;
+  display: block;
+  margin: 0 auto 1rem auto; }
+
+.section-title {
+  font-size: 2rem;
+  display: block;
+  padding-bottom: 0.5rem;
+  font-weight: 100; }
